@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".AdminAddProductActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/items"
+                android:layout_margin="10dp"
+                android:textSize="25sp"
+                android:textColor="#005AAA"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Product"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp">
+
+            <ImageView
+                android:onClick="addPhotoOnClick"
+                android:id="@+id/pImage"
+                android:background="@drawable/ic_add_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/round"
+            android:id="@+id/pName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Name:" />
+
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/round"
+            android:layout_marginTop="5dp"
+            android:id="@+id/pPrice"
+            android:maxLength="6"
+            android:digits="0123456789."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price:"/>
+
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/round"
+            android:id="@+id/pSize"
+            android:maxLength="20"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Size:"/>
+
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/round"
+            android:layout_marginTop="5dp"
+            android:id="@+id/pQuantity"
+            android:maxLength="6"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantity:"/>
+
+        <EditText
+            android:padding="10dp"
+            android:background="@drawable/round"
+            android:layout_marginTop="5dp"
+            android:id="@+id/pdescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description:"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="end"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:onClick="addProductOnClick"
+                android:background="@drawable/open_circle"
+                android:text="Add"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
